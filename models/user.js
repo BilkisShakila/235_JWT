@@ -6,4 +6,15 @@ module.export = (sequelize, DataTypes) => {
             autoIncrement: true
         },
 
-
+        email: {
+            type: DataTypes.STRING,
+            allowNull: false,
+            uniqe: true
+        },
+        password: {
+            type: DataTypes.STRING,
+            allowNull: false
+        }
+    });
+    return user;
+}
